@@ -1,7 +1,17 @@
+import sys
 import rd
-while True:
-    command = input("$: ")
-    if command == "rd":
-        rd.index()
+
+#print(len(sys.argv))
+if len(sys.argv) == 3:
+    if(sys.argv[1]=='rd'):
+        rd.readfunc(sys.argv[2])
     else:
-        print 'not valid'
+        print ('comando sconosciuto')
+else:
+    print ('Numero di parametri non valido')
+
+
+
+
+
+
